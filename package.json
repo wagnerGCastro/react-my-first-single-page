@@ -6,8 +6,12 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.1.10",
+    "bootstrap": "^3.3.7",
+    "node-sass": "^4.12.0",
     "react": "^17.0.1",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^17.0.1",
+    "react-router": "^5.0.0",
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4"
   },
@@ -15,7 +19,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "copysassbs": "./node_modules/gulp/bin/gulp.js copy-sass-bs",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "compile-sass": "node-sass src/assets/sass/bootstrap.scss src/assets/css/bootstrap.css",
+    "compile-less": "lessc src/assets/sass/bootstrap.less src/assets/css/bootstrap.css",
+    "minify-sass": "node-sass src/assets/sass/bootstrap.scss public/assets/css/bootstrap.min.css --output-style compressed",
+    "map-sass": "node-sass src/assets/sass/bootstrap.scss src/assets/css/bootstrap.css --source-map true"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +44,27 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "copy": "^0.3.2",
+    "event-stream": "^4.0.1",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-count": "^1.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "gulp4-run-sequence": "^0.3.2",
+    "jshint": "^2.10.2",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "merge-stream": "^2.0.0",
+    "readable-stream": "^3.3.0"
   }
 }

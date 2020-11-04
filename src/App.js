@@ -18,6 +18,19 @@ function App() {
           Learn React
         </a>
       </header>
+       <div class="alert alert-danger" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          Enter a valid email address
+       </div>
+
+      <div className="panel panel-default">
+          <div className="panel-body">
+            Panel content
+          </div>
+      <div className="panel-footer">Panel footer</div>
+    </div>
+
     </div>
   );
 }
